@@ -1,0 +1,35 @@
+{
+  "name": "ts-demo",
+  "version": "1.0.0",
+  "description": "Describe ts-demo here",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --env development --config ./build/webpack.config.js",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js",
+    "postbuild": "copyfiles index.html dist"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^16.0.0",
+    "@types/react-hot-loader": "^3.0.4",
+    "copyfiles": "^1.2.0",
+    "cross-env": "^3.1.4",
+    "fork-ts-checker-webpack-plugin": "^0.2.8",
+    "react-hot-loader": "^3.0.0",
+    "rimraf": "^2.6.0",
+    "ts-loader": "^3.0.0",
+    "tslint": "^5.8.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "^2.5.3",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.2.0"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": ""
+}
